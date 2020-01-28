@@ -19,4 +19,6 @@ if simgr.found:
     print("Found solution:")
     print(solution.posix.dumps(0))
 else:
+
     print("No solution found :(")
+
