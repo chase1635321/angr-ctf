@@ -17,7 +17,8 @@ if simgr.found:
     solution = simgr.found[0]
     solution_BVS = solution.memory.load(0x804a050, 16)
     solution.add_constraints(solution_BVS == "BWYRUBQCMVSBRGFU")
-    s = solution.se.eval(password, cast_to=bytes).decode()
+    s = solution.solver.eval(password, cast_to=bytes).decode()
     print(s)
 else:
     print("No solution found")
+
